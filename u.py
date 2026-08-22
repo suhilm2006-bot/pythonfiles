@@ -1,3 +1,5 @@
+#suhil m
+#KUB25EEE684
 '''
 #1)[3,10,15,54,75,25,23] print number divisible by 3,5,8 if none print none
 
@@ -97,7 +99,7 @@ if user_num % 3 == 0:
     result = user_num * 5
     print("Result:", result)
 else:
-    print("The number is not divisible by 3.")'''
+    print("The number is not divisible by 3.")
     
 #11)Take 2 numbers as input from user and check whether the sum is divisible by 5
 a = int(input("Enter first number: "))
@@ -158,3 +160,130 @@ for i in range(1, 11):
         divisors.append(i)
 
 print("Divisors:", divisors)
+
+#16)take 2 num as input from user and if it divisible by 5 square the number
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+if num1 % 5 == 0:
+    print(num1 * num1)
+
+if num2 % 5 == 0:
+    print(num2 * num2)
+
+
+#17) [10,3,5,6,7,8,9,24,3,5,6,7,89] find the prime number even number and odd numbers
+numbers = [10,3,5,6,7,8,9,24,3,5,6,7,89]
+
+prime = []
+even = []
+odd = []
+
+for n in numbers:
+    # Check even and odd
+    if n % 2 == 0:
+        even.append(n)
+    else:
+        odd.append(n)
+
+    # Check prime
+    if n > 1:
+        count = 0
+        for i in range(1, n + 1):
+            if n % i == 0:
+                count += 1
+
+        if count == 2:
+            prime.append(n)
+
+print("Prime numbers:", prime)
+print("Even numbers:", even)
+print("Odd numbers:", odd)
+#18)[-1, 3, 34, -8, -9,-1]remove negative numbers and numbers divisible by 3
+
+numbers = [-1, 3, 34, -8, -9, -1]
+
+result = []
+
+for num in numbers:
+    if num >= 0 and num % 3 != 0:
+        result.append(num)
+
+print(result)'
+
+#19)1, 2,3, 4, 5, 6, 7, 8, 9]find the average sum count of list
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+total = sum(numbers)
+count = len(numbers)
+average = total / count
+
+print("Sum:", total)
+print("Count:", count)
+print("Average:", average)
+
+
+#20)take the divisors from 1 to 10 and check 1578693 is divisible or not if divisible -100 from it
+
+num = 1578693
+
+for i in range(1, 11):
+    if num % i == 0:
+        num = num - 100
+        print(i, "Divisible")
+    else:
+        print(i, "Not divisible")
+
+print("Final number:", num)
+
+
+#21)"univesity"count vowels in it
+
+word = "univesity"
+
+count = 0
+
+for ch in word:
+    if ch in "aeiou":
+        count += 1
+
+print("Number of vowels:", count)'''
+
+#22)[10,3,5,6,7,8,9,24,3,5,6,7,89] print 89 using index and add 59 to the list in 9th index
+
+"""numbers = [10, 3, 5, 6, 7, 8, 9, 24, 3, 5, 6, 7, 89]
+
+# Print 89 using index
+print(numbers[12])
+
+# Add 59 at 9th index
+numbers.insert(9, 59)
+
+print(numbers)"""
+
+#23)[-1,3,34,-8,-9,1] square elements of the list  
+
+"""numbers = [-1, 3, 34, -8, -9, 1]
+
+result = [x ** 2 for x in numbers]
+
+print(result)"""
+
+
+#24)take 2 numbers as input and 2 floor division 
+
+"""a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+result = a // b
+
+print("Floor division:", result)"""
+
+#25)[10,3,5,6,7,8,9,24,3,5,6,7,89,7,8,54,621,57,24,3,5,6,4,] fine unique values 
+
+"""numbers = [10, 3, 5, 6, 7, 8, 9, 24, 3, 5, 6, 7, 89, 7, 8, 54, 621, 57, 24, 3, 5, 6, 4]
+
+unique = list(dict.fromkeys(numbers))
+
+print(unique)"""
